@@ -1,3 +1,61 @@
 body {
     text-align: center;
+    background: url(./surfboards.svg) no-repeat center;
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    /*font-family: 'Kalam', cursive;*/
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
 }
+
+h1 {
+	font-family: 'Nothing You Could Do', cursive;
+}
+
+/*-----------start HOME PAGE-----------*/
+
+#homeCtnr {
+    background-color: white;
+    width: 50%;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 16%;
+    border-radius: 25px;
+    box-shadow: 8px 8px #7A5B4F;
+}
+
+#homeCtnr h1 {
+	margin-bottom: 10px;
+	font-size: 38px;
+}
+
+/*-----------end HOME PAGE-----------*/
+.btn {
+    width: 105px;
+    border-radius: 12px;
+    background-color: #9ED17C;
+    height: 46px;
+    border: 2px solid #717C39;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+/*-----------start NEW ORDER PAGE-----------*/
+
+#orderCtnr {
+	background-color: white;
+    width: 50%;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 12%;
+    border-radius: 25px;
+    box-shadow: 8px 8px #7A5B4F;
+}
+
+#orderInput {
+	resize: none;
+	width: 90%;
+}
+

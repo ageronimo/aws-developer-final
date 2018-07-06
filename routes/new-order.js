@@ -44,7 +44,7 @@ router.route('/new-order')
 				sendOrderStatus();
 			}
 		});
-		res.render('../views/home');
+		res.render('../views/confirm-order');
     })
 
 module.exports = router;

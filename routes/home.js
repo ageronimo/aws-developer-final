@@ -9,4 +9,3 @@ router.route('/')
     })
 
 module.exports = router;
-console.log('the route works');

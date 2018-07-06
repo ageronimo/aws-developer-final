@@ -9,6 +9,7 @@ const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 const path = require('path');
 const home = require('./routes/home')
 const newOrder = require('./routes/new-order')
+const confirmOrder = require('./routes/confirm-order')
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.use("/public", express.static(path.join(__dirname, 'public')));
@@ -23,6 +24,7 @@ app.engine('.hbs', exphbs({
 
 app.use('/', home)
 app.use('/', newOrder)
+app.use('/', confirmOrder)
 
 // CREATE QUEUE
 function createQueue() {

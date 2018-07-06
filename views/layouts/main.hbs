@@ -5,13 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../public/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Kalam|Nothing+You+Could+Do|Muli" rel="stylesheet">
-    <script type="text/javascript" href="../routes/new-order.js"></script>
     <script type="text/javascript" href="../public/client.js"></script>
+    <script type="text/javascript" href="../routes/new-order.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Nothing+You+Could+Do|Muli" rel="stylesheet">
     <title>Surf's Up</title>
 </head>
 <body>
+    <script type="text/javascript">
+        $('#orderBtn').on('click', () => {
+            setTimeOut(() => {
+                $('#orderForm').reset();
+            }, 200);
+        });
+
+        //CHANGE ACTIVE-INACTIVE CLASS ON NAVBAR
+        $(document).ready(() => { //Home page is active on start
+            if ($('#homeCtnr').length) {
+                console.log('im home');
+                $('#navHome').addClass('active');
+            } else if ($('#orderCtnr').length) {
+                console.log('im ordering');
+                $('#navOrder').addClass('active');
+            }
+        });
+/*
+        $('#navbar li').on('click', () => {
+            console.log(this);
+            $('#navbar li').toggleClass('active');
+            $('#navbar li a').toggleClass('activeLink');
+        })*/
+    </script>
+
+    <ul id="navbar">
+        <li id="navHome"><a href="/">Home</a></li>
+        <li id="navOrder"><a href="/new-order">Place Order</a></li>
+        <li id="navDev"><a href="/">About Developer</a></li>
+    </ul>
     <div id="main">
         {{{ body }}}
     </div>

@@ -19,16 +19,58 @@ h1 {
 	height: 100%;
 }
 
+/*-----------start NAVBAR-----------*/
+
+#navbar {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    position: absolute;
+    z-index: 3;
+    flex-direction: row;
+    margin-top: 0;
+    justify-content: space-around;
+    padding: 0;
+    background-color: #2B5B46;
+}
+
+#navbar li {
+	width: 33.3%;
+    height: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#navbar li:hover {
+	background-color: #3EA87A;
+	cursor: pointer;
+}
+
+.active {
+	background-color: #3EA87A;
+}
+
+#navbar li a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+
+#navbar li a:hover {
+	color: #2B5B46;
+}
+
+/*-----------end NAVBAR-----------*/
 /*-----------start HOME PAGE-----------*/
 
 #homeCtnr {
     background-color: white;
+    border-radius: 25px;
+    box-shadow: 8px 8px #7A5B4F;
     width: 50%;
     position: absolute;
     margin-left: 25%;
     margin-top: 16%;
-    border-radius: 25px;
-    box-shadow: 8px 8px #7A5B4F;
 }
 
 #homeCtnr h1 {
@@ -78,10 +120,26 @@ h1 {
 
 #gifCtnr {
 	background: url(./surfer.gif) no-repeat center;
-    background-size: 40%;
+    background-size: 50vh;
     width: 100vw;
     height: 100vh;
     background-color: #86d0dd;
+}
+
+#confirmGreet {
+	position: absolute;
+    margin-top: calc(60px + 3%);
+    width: 40vw;
+    margin-left: 30vw;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 8px 8px #7A5B4F;
+}
+
+#confirmGreet h2 {
+	font-family: 'Nothing You Could Do', cursive;
+    padding-left: 0.83em;
+    padding-right: 0.83em;
 }
 
 #credits {
@@ -99,3 +157,5 @@ h1 {
     bottom: 0;
     margin-top: 74vh;
 }
+
+/*-----------start CONFIRM ORDER PAGE-----------*/
